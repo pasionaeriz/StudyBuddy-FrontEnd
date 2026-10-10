@@ -379,7 +379,7 @@ class GradeCalculatorActivity : Activity() {
 
     // ==========================================================
     // GET PERCENTAGES
-    // ==========================================================
+    // ===   z=======================================================
 
     private fun getPercentages(
         container: LinearLayout

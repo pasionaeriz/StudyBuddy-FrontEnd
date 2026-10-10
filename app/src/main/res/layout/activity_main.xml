@@ -1,141 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7F3FF"
-    android:fillViewport="true">
+    android:background="#F8F6FC"
+    android:fillViewport="true"
+    android:overScrollMode="never">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="250dp"
             android:orientation="vertical"
-            android:gravity="center"
-            android:background="#7E57C2"
-            android:padding="24dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📚"
-                android:textSize="45sp"
-                android:layout_marginBottom="10dp" />
+            android:gravity="center_vertical"
+            android:padding="28dp"
+            android:background="@drawable/header_gradient">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="STUDYBUDDY"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your simple study assistant"
+                android:text="Study smarter. Stay organized."
+                android:textColor="#EEE8FA"
                 android:textSize="16sp"
-                android:textColor="#EDE7F6"
                 android:layout_marginTop="6dp" />
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/chip_background"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_marginTop="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 study tools available"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
 
         <!-- CONTENT -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="25dp">
+            android:padding="22dp">
+
+            <!-- WELCOME -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome back!"
+                android:textColor="#271F30"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Choose a Feature"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:textColor="#2D2438"
+                android:text="Choose what you want to do today."
+                android:textColor="#7A7283"
+                android:textSize="15sp"
+                android:layout_marginTop="4dp"
                 android:layout_marginBottom="20dp" />
+
+
+            <!-- SMALL INFO CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/dashboard_soft_card"
+                android:padding="18dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:gravity="center"
+                    android:text="✓"
+                    android:textColor="#6D44B8"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/icon_circle_bg" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dashboard Overview"
+                        android:textColor="#4E347C"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Use the tools below to calculate grades and plan your study time."
+                        android:textColor="#665F6D"
+                        android:textSize="13sp"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!-- SECTION TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main Features"
+                android:textColor="#2D2436"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="14dp" />
+
 
             <!-- GRADE CALCULATOR CARD -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp"
-                android:background="@drawable/card_background"
-                android:layout_marginBottom="20dp"
-                android:elevation="5dp">
+                android:background="@drawable/dashboard_card"
+                android:elevation="6dp"
+                android:padding="22dp"
+                android:layout_marginBottom="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="📊"
+                        android:textSize="24sp"
+                        android:background="@drawable/icon_circle_bg" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Grade Calculator"
+                            android:textColor="#2B2232"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Calculate activities, quizzes, exams, and final grade."
+                            android:textColor="#77707D"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="📊 Grade Calculator"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#512DA8" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Calculate your average grade and check your result."
+                    android:text="Add multiple activity and quiz scores, then view the percentage, equivalent grade, and remarks."
+                    android:textColor="#615A67"
                     android:textSize="14sp"
-                    android:textColor="#666666"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="15dp" />
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="18dp"
+                    android:lineSpacingExtra="2dp" />
 
                 <Button
                     android:id="@+id/btnGradeCalculator"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="52dp"
                     android:text="OPEN GRADE CALCULATOR"
-                    android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    android:backgroundTint="#7E57C2" />
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#6D44B8" />
 
             </LinearLayout>
+
 
             <!-- STUDY PLANNER CARD -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="20dp"
-                android:background="@drawable/card_background"
-                android:elevation="5dp">
+                android:background="@drawable/dashboard_card"
+                android:elevation="6dp"
+                android:padding="22dp"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:gravity="center"
+                        android:text="⏰"
+                        android:textSize="24sp"
+                        android:background="@drawable/icon_circle_bg" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Study Time Planner"
+                            android:textColor="#2B2232"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Organize your available study time."
+                            android:textColor="#77707D"
+                            android:textSize="14sp"
+                            android:layout_marginTop="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="⏰ Study Time Planner"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:textColor="#512DA8" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Divide your available study time between your subjects."
+                    android:text="Enter the number of subjects and available study hours to create a simple study plan."
+                    android:textColor="#615A67"
                     android:textSize="14sp"
-                    android:textColor="#666666"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="15dp" />
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="18dp"
+                    android:lineSpacingExtra="2dp" />
 
                 <Button
                     android:id="@+id/btnStudyPlanner"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="52dp"
                     android:text="OPEN STUDY PLANNER"
-                    android:textColor="#FFFFFF"
                     android:textStyle="bold"
-                    android:backgroundTint="#7E57C2" />
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#6D44B8" />
 
             </LinearLayout>
+
+
+            <!-- STUDY TIP -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/footer_tip_bg"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Study Tip"
+                    android:textColor="#4F347C"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Break large tasks into smaller parts so studying feels easier and more manageable."
+                    android:textColor="#655D6B"
+                    android:textSize="13sp"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="2dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="StudyBuddy • Dashboard"
+                android:textColor="#9B94A3"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="24dp" />
 
         </LinearLayout>
 
